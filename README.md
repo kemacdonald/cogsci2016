@@ -10,7 +10,7 @@ Before using `cogsci2016`, make sure the following software is installed on your
 - A [TeX](http://de.wikipedia.org/wiki/TeX) distribution (2013 or later; e.g., [MikTeX](http://miktex.org/) for Windows, [MacTeX](https://tug.org/mactex/) for Mac, obviously, or [TeX Live](http://www.tug.org/texlive/) for Linux)
  
 ### Install cogsci2016
-Finally install `cogsci2016` from this GitHub repository:
+Install `cogsci2016` from this GitHub repository:
 
 ```S
 devtools::install_github("kemacdonald/cogsci2016")
@@ -19,9 +19,15 @@ devtools::install_github("kemacdonald/cogsci2016")
 ### Create a manuscript
 Once you have installed the `cogsci2016` package you can select the CogSci template when creating a new Markdown file through the menus in RStudio.
 
-![CogSci template selection](http://stanford.edu/~kylem4/cogsci2016.png)
+<img src="http://stanford.edu/~kylem4/cogsci2016.png" alt="menu select" style="width:400;height:300px">
 
-You can add citations to the library.bib file that gets created when you open a new template file.
+When you select "OK" you will create a directory that contains the following folders/files:
+
+* library.bib (bibtex database of all reference-list entries)
+* apa6.csl (for creating apa style citations)
+* figs (folder to store local images)
+* .Rmd (R Markdown file)
+* cogsci.sty (CogSci specific styles in latex)
 
 There is more information about authoring in R Markdown located in the cogsci2016 template .Rmd file.
 
@@ -30,7 +36,7 @@ There is more information about authoring in R Markdown located in the cogsci201
 Note that there is some latex in the document header (YAML). This allows you to 
 format the author and affiliation information. Here is the latex code for different author styles from the CogSci submissions package.
 
-```S
+```latex
 For several authors from the same institution use: 
  
  \author{Author 1 \and ... \and Author n \\
