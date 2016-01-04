@@ -23,4 +23,35 @@ Once you have installed the `cogsci2016` package you can select the CogSci templ
 
 You can add citations to the library.bib file that gets created when you open a new template file.
 
-There is more information about authoring in R Markdown located in the .Rmd file itself.
+There is more information about authoring in R Markdown located in the cogsci2016 template .Rmd file.
+
+### Author information
+
+Note that there is some latex in the document header (YAML). This allows you to 
+format the author and affiliation information. Here is the latex code for different author styles from the CogSci submissions package.
+
+```S
+For several authors from the same institution use: 
+ 
+ \author{Author 1 \and ... \and Author n \\
+         Address line \\ ... \\ Address line}
+ 
+ If the names do not fit well on one line use:
+ 
+         Author 1 \\ {\bf Author 2} \\ ... \\ {\bf Author n} \\
+ 
+For authors from different institutions:
+ 
+ \author{Author 1 \\ Address line \\  ... \\ Address line
+         \And  ... \And
+         Author n \\ Address line \\ ... \\ Address line}
+ 
+To start a seperate ``row'' of authors use \AND, as in
+ 
+ \author{Author 1 \\ Address line \\  ... \\ Address line
+         \AND
+         Author 2 \\ Address line \\ ... \\ Address line \And
+         Author 3 \\ Address line \\ ... \\ Address line}
+```
+
+
