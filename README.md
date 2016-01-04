@@ -60,4 +60,6 @@ To start a seperate ``row'' of authors use \AND, as in
          Author 3 \\ Address line \\ ... \\ Address line}
 ```
 
+## Other APA style template
+This package is inspired by [Frederik Aust's papaj package](https://github.com/crsh/papaja): Create APA manuscripts with RMarkdown.
 
