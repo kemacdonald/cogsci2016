@@ -19,7 +19,7 @@ devtools::install_github("kemacdonald/cogsci2016")
 ### Create a manuscript
 Once you have installed the `cogsci2016` package you can select the CogSci template when creating a new Markdown file through the menus in RStudio.
 
-<img src="http://stanford.edu/~kylem4/cogsci2016.png" alt="menu select" width="300px" height="200px"">
+<img src="http://stanford.edu/~kylem4/cogsci2016.png" alt="menu select" width="400px" height="300px"">
 
 When you select "OK" you will create a directory that contains the following folders/files:
 
