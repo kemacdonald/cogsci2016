@@ -3,11 +3,11 @@ Cogsci2016 is a R-package that includes a [RMarkdown](http://rmarkdown.rstudio.c
 
 ## Setup
 ### Requirements
-Before using `cogsci2016`, make sure the following software is installed on your computer:
+To use `cogsci2016`, make sure the following software is installed:
 
 - [R](http://www.r-project.org/) (2.11.1 or later)
 - [RStudio](http://www.rstudio.com/) (0.98.932 or later) is optional; if you don't use RStudio, you need to install [pandoc](http://johnmacfarlane.net/pandoc/) using the [instructions for your operating system](https://github.com/rstudio/rmarkdown/blob/master/PANDOC.md)
-- A [TeX](http://de.wikipedia.org/wiki/TeX) distribution (2013 or later; e.g., [MikTeX](http://miktex.org/) for Windows, [MacTeX](https://tug.org/mactex/) for Mac, obviously, or [TeX Live](http://www.tug.org/texlive/) for Linux)
+- A [TeX](http://de.wikipedia.org/wiki/TeX) distribution (2013 or later; e.g., [MikTeX](http://miktex.org/) for Windows, [MacTeX](https://tug.org/mactex/) for Mac, or [TeX Live](http://www.tug.org/texlive/) for Linux)
  
 ### Install cogsci2016
 Install `cogsci2016` from this GitHub repository:
@@ -33,7 +33,7 @@ There is more information about authoring in R Markdown located in the cogsci201
 
 ### Author information
 
-Note that there is some latex in the document header (YAML). This allows you to 
+Note that there is some latex in the document header (the YAML). This allows you to 
 format the author and affiliation information. Here is the latex code for different author styles from the CogSci submissions package.
 
 ```latex
@@ -60,6 +60,6 @@ To start a seperate ``row'' of authors use \AND, as in
          Author 3 \\ Address line \\ ... \\ Address line}
 ```
 
-## Other APA style template
-This package is inspired by [Frederik Aust's papaj package](https://github.com/crsh/papaja): Create APA manuscripts with RMarkdown.
+## Another APA style template
+The `cogsci2016` package is inspired by [Frederik Aust's papaj package](https://github.com/crsh/papaja): Create APA manuscripts with RMarkdown.
 
