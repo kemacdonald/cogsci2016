@@ -1,0 +1,253 @@
+% Template for Cogsci submission with R Markdown
+
+% Stuff changed from original Markdown PLOS Template
+\documentclass[10pt, letterpaper]{article}
+
+\usepackage{cogsci}
+\usepackage{pslatex}
+\usepackage{float}
+
+% amsmath package, useful for mathematical formulas
+\usepackage{amsmath}
+
+% amssymb package, useful for mathematical symbols
+\usepackage{amssymb}
+
+% hyperref package, useful for hyperlinks
+\usepackage{hyperref}
+
+% graphicx package, useful for including eps and pdf graphics
+% include graphics with the command \includegraphics
+\usepackage{graphicx}
+
+% Sweave(-like)
+\usepackage{fancyvrb}
+\DefineVerbatimEnvironment{Sinput}{Verbatim}{fontshape=sl}
+\DefineVerbatimEnvironment{Soutput}{Verbatim}{}
+\DefineVerbatimEnvironment{Scode}{Verbatim}{fontshape=sl}
+\newenvironment{Schunk}{}{}
+\DefineVerbatimEnvironment{Code}{Verbatim}{}
+\DefineVerbatimEnvironment{CodeInput}{Verbatim}{fontshape=sl}
+\DefineVerbatimEnvironment{CodeOutput}{Verbatim}{}
+\newenvironment{CodeChunk}{}{}
+
+% cite package, to clean up citations in the main text. Do not remove.
+\usepackage{cite}
+
+\usepackage{color}
+
+% Use doublespacing - comment out for single spacing
+%\usepackage{setspace}
+%\doublespacing
+
+
+% % Text layout
+% \topmargin 0.0cm
+% \oddsidemargin 0.5cm
+% \evensidemargin 0.5cm
+% \textwidth 16cm
+% \textheight 21cm
+
+\title{How to Make a Camera-Ready Proceedings Contribution}
+
+
+\author{{\large \bf Author 1} \\ \texttt{author1@university.edu} \\ Department of Psychology \\ Some University \And {\large \bf Author 2} \\ \texttt{author1@university.edu} \\ Department of Psychology \\ Some University}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+The abstract should be one paragraph, indented 1/8 inch on both sides,
+in 9 point font with single spacing. The heading Abstract should be 10
+point, bold, centered, with one line space below it. This one-paragraph
+abstract section is required only for standard spoken papers and
+standard posters (i.e., those presentations that will be represented by
+six page papers in the Proceedings).
+
+\textbf{Keywords:}
+Add your choice of indexing terms or keywords; kindly use a semi-colon;
+between each term.
+\end{abstract}
+
+\section{General Formatting
+Instructions}\label{general-formatting-instructions}
+
+For general information about authoring in markdown, see
+\textbf{\href{http://rmarkdown.rstudio.com/authoring_basics.html}{here}.}
+
+For standard spoken papers and standard posters, the entire contribution
+(including figures, references, everything) can be no longer than six
+pages. For abstract posters, the entire contribution can be no longer
+than one page. For symposia, the entire contribution can be no longer
+than two pages.
+
+The text of the paper should be formatted in two columns with an overall
+width of 7 inches (17.8 cm) and length of 9.25 inches (23.5 cm), with
+0.25 inches between the columns. Leave two line spaces between the last
+author listed and the text of the paper. The left margin should be 0.75
+inches and the top margin should be 1 inch.
+\textbf{The right and bottom margins will depend on whether you use
+U.S. letter or A4 paper, so you must be sure to measure the width of
+the printed text.} Use 10 point Times Roman with 12 point vertical
+spacing, unless otherwise specified.
+
+The title should be in 14 point, bold, and centered. The title should be
+formatted with initial caps (the first letter of content words
+capitalized and the rest lower case). Each author's name should appear
+on a separate line, 11 point bold, and centered, with the author's email
+address in parentheses. Under each author's name list the author's
+affiliation and postal address in ordinary 10 point type.
+
+Indent the first line of each paragraph by 1/8\textasciitilde{}inch
+(except for the first paragraph of a new section). Do not add extra
+vertical space between paragraphs.
+
+\section{First-Level Headings}\label{first-level-headings}
+
+First level headings should be in 12 point , initial caps, bold and
+centered. Leave one line space above the heading and
+1/4\textasciitilde{}line space below the heading.
+
+\subsection{Second-Level Headings}\label{second-level-headings}
+
+Second level headings should be 11 point , initial caps, bold, and flush
+left. Leave one line space above the heading and 1/4\textasciitilde{}
+line space below the heading.
+
+\subsubsection{Third-Level Headings}\label{third-level-headings}
+
+Third-level headings should be 10 point , initial caps, bold, and flush
+left. Leave one line space above the heading, but no space after the
+heading.
+
+\section{Formalities, Footnotes, and
+Floats}\label{formalities-footnotes-and-floats}
+
+Use standard APA citation format. Citations within the text should
+include the author's last name and year. If the authors' names are
+included in the sentence, place only the year in parentheses, as in
+(1972), but otherwise place the entire reference in parentheses with the
+authors and year separated by a comma (Newell \& Simon, 1972). List
+multiple references alphabetically and separate them by semicolons
+(Chalnick \& Billman, 1988; Newell \& Simon, 1972). Use the et. al.
+construction only after listing all the authors to a publication in an
+earlier reference and for citations with four or more authors.
+
+For more information on citations in R Markdown, see
+\textbf{\href{http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html\#citations}{here}.}
+
+\subsection{Footnotes}\label{footnotes}
+
+Indicate footnotes with a number\footnote{Sample of the first
+footnote.} in the text. Place the footnotes in 9 point type at the
+bottom of the page on which they appear. Precede the footnote with a
+horizontal rule.\footnote{Sample of the second footnote.}
+
+\subsection{Figures}\label{figures}
+
+All artwork must be very dark for purposes of reproduction and should
+not be hand drawn. Number figures sequentially, placing the figure
+number and caption, in 10 point, after the figure with one line space
+above the caption and one line space below it. If necessary, leave extra
+white space at the bottom of the page to avoid splitting the figure and
+figure caption. You may float figures to the top or bottom of a column,
+or set wide figures across both columns.
+
+\subsection{Two-column images}\label{two-column-images}
+
+You can read local images using png package for example and plot it like
+a regular plot using grid.raster from the grid package. With this method
+you have full control of the size of your image. \textbf{Note: Image
+must be in .png file format for the readPNG function to work.}
+
+You might want to display a wide figure across both columns. To do this,
+you can change the \texttt{fig.env} chunk option to \texttt{figure*}. To
+align the image in the center of the page, set \texttt{fig.align} option
+to \texttt{center}.
+
+\begin{CodeChunk}
+\begin{figure*}[h]
+
+{\centering \includegraphics{figs/2-col-image-1} 
+
+}
+
+\caption[This image spans both columns]{This image spans both columns.}\label{fig:2-col-image}
+\end{figure*}
+\end{CodeChunk}
+
+\subsection{One-column images}\label{one-column-images}
+
+Single column is the default option, but if you want set it explicitly,
+set \texttt{fig.env} to \texttt{figure}.
+
+\begin{CodeChunk}
+\begin{figure}[H]
+
+{\centering \includegraphics{figs/image-1} 
+
+}
+
+\caption[One column image]{One column image.}\label{fig:image}
+\end{figure}
+\end{CodeChunk}
+
+\subsection{R Plots}\label{r-plots}
+
+You can use R chunks directly to plot graphs. And you can use latex
+floats in the \texttt{fig.pos} chunk option to have more control over
+the location of your plot on the page. For more information on latex
+placement specifiers see
+\textbf{\href{https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions}{here}}
+
+\begin{CodeChunk}
+\begin{figure}[H]
+
+{\centering \includegraphics{figs/plot-1} 
+
+}
+
+\caption[R plot]{R plot}\label{fig:plot}
+\end{figure}
+\end{CodeChunk}
+
+\subsection{Tables}\label{tables}
+
+Number tables consecutively; place the table number and title (in 10
+point) above the table with one line space above the caption and one
+line space below it, as in Table 1. You may float tables to the top or
+bottom of a column, set wide tables across both columns.
+
+You can use the xtable function in the xtable package.
+
+\begin{table*}[H]
+\centering
+\begin{tabular}{rrrrr}
+  \hline
+ & Estimate & Std. Error & t value & Pr($>$$|$t$|$) \\ 
+  \hline
+(Intercept) & 0.14 & 0.10 & 1.5 & 0.14 \\ 
+  x & 2.04 & 0.09 & 22.6 & 0.00 \\ 
+   \hline
+\end{tabular}
+\end{table*}
+
+\section{Acknowledgements}\label{acknowledgements}
+
+Place acknowledgments (including funding information) in a section at
+the end of the paper.
+
+\section{References}\label{references}
+
+\setlength{\parindent}{-0.1in} \setlength{\leftskip}{0.125in} \noindent
+
+Chalnick, A., \& Billman, D. (1988). Unsupervised learning of
+correlational structure. In \emph{Proceedings of the tenth annual
+conference of the cognitive science society} (pp. 510--516). Hillsdale,
+NJ: Lawrence Erlbaum Associates.
+
+Newell, A., \& Simon, H. A. (1972). \emph{Human problem solving}.
+Englewood Cliffs, NJ: Prentice-Hall.
+
+\end{document}
