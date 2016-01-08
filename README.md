@@ -1,5 +1,5 @@
 # Create CogSci proceedings submission with RMarkdown
-Cogsci2016 is a R-package that includes a [RMarkdown](http://rmarkdown.rstudio.com/) template to create a camera ready submission to the [Annual Cognitive Science Conference](http://cognitivesciencesociety.org/conference2016/submissions.html). It uses the LaTeX template specifically designed to format CogSci Conference Proceedings.
+Cogsci2016 is a R-package that includes a [RMarkdown](http://rmarkdown.rstudio.com/) template to create a camera ready submission to the [Annual Cognitive Science Society Conference](http://cognitivesciencesociety.org/conference2016/submissions.html). It uses the LaTeX template designed to format CogSci Conference Proceedings.
 
 ## Setup
 ### Requirements
@@ -61,5 +61,5 @@ To start a seperate ``row'' of authors use \AND, as in
 ```
 
 ## Another APA style template
-The `cogsci2016` package is inspired by [Frederik Aust's papaj package](https://github.com/crsh/papaja): Create APA manuscripts with RMarkdown.
+The `cogsci2016` package is inspired by [Frederik Aust's papaj package](https://github.com/crsh/papaja): Create APA manuscripts with RMarkdown. This is a great resource for creating APA style manuscripts in R Markdown.
 
