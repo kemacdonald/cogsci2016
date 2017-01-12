@@ -1,4 +1,4 @@
-# Create ACL proceedings submission with RMarkdown
+# Create ACL/EACL proceedings submission with RMarkdown
 Acl2017 is a R-package that includes a [RMarkdown](http://rmarkdown.rstudio.com/) template to create a camera ready submission to the [Annual Conference of the European Chapter of the Association for Computational Linguistics](http://eacl2017.org/images/site/eacl-2017-template.zip). It uses the LaTeX template designed to format ACL Conference Proceedings.
 
 ## Setup
