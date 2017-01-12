@@ -1,14 +1,14 @@
-Package: cogsci2016
-Title: Create CogSci Proceedings Submission with RMarkdown
+Package: acl2017
+Title: Create CMCL Proceedings Submission with RMarkdown
 Version: 0.0.0.9000
-Authors@R: person("Kyle", "MacDonald", email = "kyle.macdonald@stanford.edu", role = c("aut", "cre"))
-Description: Cogsci2016 provides an R Markdown LaTeX format and template for
-    authoring a CogSci conference submission.
+Authors@R: person("Zachary", "Burchill", email = "zachary.burchill@rochester.edu", role = c("aut"))
+Description: ACL2017 provides an R Markdown LaTeX format and template for
+    authoring a ACL conference submission. Based on Kyle MacDonald's CogSci 2016 template
 Depends:
     R (>= 3.2.0)
 License: MIT + file LICENSE
-URL: http://github.com/kemacdonlad/cogsci2016
-BugReports: http://github.com/kemacdonlad/cogsci2016/issues
+URL: http://github.com/burchill/acl2017
+BugReports: http://github.com/burchill/acl2017/issues
 LazyData: true
 Imports:
     rmarkdown (>= 0.3.10),

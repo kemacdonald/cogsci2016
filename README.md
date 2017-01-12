@@ -1,23 +1,23 @@
-# Create CogSci proceedings submission with RMarkdown
-Cogsci2016 is a R-package that includes a [RMarkdown](http://rmarkdown.rstudio.com/) template to create a camera ready submission to the [Annual Cognitive Science Society Conference](http://cognitivesciencesociety.org/conference2016/submissions.html). It uses the LaTeX template designed to format CogSci Conference Proceedings.
+# Create ACL proceedings submission with RMarkdown
+Acl2017 is a R-package that includes a [RMarkdown](http://rmarkdown.rstudio.com/) template to create a camera ready submission to the [Annual Conference of the European Chapter of the Association for Computational Linguistics](http://eacl2017.org/images/site/eacl-2017-template.zip). It uses the LaTeX template designed to format ACL Conference Proceedings.
 
 ## Setup
 ### Requirements
-To use `cogsci2016`, make sure the following software is installed:
+To use `acl2017`, make sure the following software is installed:
 
 - [R](http://www.r-project.org/) (2.11.1 or later)
 - [RStudio](http://www.rstudio.com/) (0.98.932 or later) is optional; if you don't use RStudio, you need to install [pandoc](http://johnmacfarlane.net/pandoc/) using the [instructions for your operating system](https://github.com/rstudio/rmarkdown/blob/master/PANDOC.md)
 - A [TeX](http://de.wikipedia.org/wiki/TeX) distribution (2013 or later; e.g., [MikTeX](http://miktex.org/) for Windows, [MacTeX](https://tug.org/mactex/) for Mac, or [TeX Live](http://www.tug.org/texlive/) for Linux)
  
-### Install cogsci2016
-Install `cogsci2016` from this GitHub repository:
+### Install acl2017
+Install `acl2017` from this GitHub repository:
 
 ```S
-devtools::install_github("kemacdonald/cogsci2016")
+devtools::install_github("burchill/acl2017")
 ```
 
 ### Create a manuscript
-Once you have installed the `cogsci2016` package you can select the CogSci template when creating a new Markdown file through the menus in RStudio.
+Once you have installed the `acl2017` package you can select the CogSci template when creating a new Markdown file through the menus in RStudio.
 
 <img src="http://stanford.edu/~kylem4/cogsci2016.png" alt="menu select" width="400px" height="300px"">
 
