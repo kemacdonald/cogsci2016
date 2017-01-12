@@ -1,8 +1,6 @@
 ---
 title: "How to Make a Camera-Ready Proceedings Contribution"
 bibliography: library.bib
-csl: apa6.csl
-document-params: "10pt, letterpaper"
 
 author-information: > 
     \author{{\large \bf Author 1} \\ \texttt{author1@university.edu} \\ Department of Psychology \\ Some University
@@ -15,11 +13,8 @@ be 10 point, bold, centered, with one line space below it. This
 one-paragraph abstract section is required only for standard spoken
 papers and standard posters (i.e., those presentations that will be
 represented by six page papers in the Proceedings)."
-    
-keywords:
-    "Add your choice of indexing terms or keywords; kindly use a semi-colon; between each term."
-    
-output: cogsci2016::cogsci_paper
+
+output: acl2017::acl_paper
 ---
 
 ```{r global_options, include=FALSE}
@@ -89,10 +84,10 @@ heading.
 Use standard APA citation format. Citations within the text should
 include the author's last name and year. If the authors' names are
 included in the sentence, place only the year in parentheses, as in
-[-@NewellSimon1972a], but otherwise place the entire reference in
+[-@Garnier2007], but otherwise place the entire reference in
 parentheses with the authors and year separated by a comma
-[@NewellSimon1972a]. List multiple references alphabetically and
-separate them by semicolons [@ChalnickBillman1988a; @NewellSimon1972a]. 
+[@Garnier2007]. List multiple references alphabetically and
+separate them by semicolons [@ChalnickBillman1988a; @Garnier2007]. 
 Use the et. al. construction only after listing all the authors to a
 publication in an earlier reference and for citations with four or
 more authors.
