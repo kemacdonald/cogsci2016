@@ -1,53 +1,39 @@
-% Template for Cogsci submission with R Markdown
+%
+% File eacl2017.tex
+%
+%% Based on the style files for ACL-2016
+%% Based on the style files for ACL-2015, with some improvements
+%%  taken from the NAACL-2016 style
+%% Based on the style files for ACL-2014, which were, in turn,
+%% Based on the style files for ACL-2013, which were, in turn,
+%% Based on the style files for ACL-2012, which were, in turn,
+%% based on the style files for ACL-2011, which were, in turn,
+%% based on the style files for ACL-2010, which were, in turn,
+%% based on the style files for ACL-IJCNLP-2009, which were, in turn,
+%% based on the style files for EACL-2009 and IJCNLP-2008...
 
-% Stuff changed from original Markdown PLOS Template
-\documentclass[$document-params$]{article}
+%% Based on the style files for EACL 2006 by
+%%e.agirre@ehu.es or Sergi.Balari@uab.es
+%% and that of ACL 08 by Joakim Nivre and Noah Smith
 
-\usepackage{cogsci}
-\usepackage{pslatex}
-\usepackage{float}
-\usepackage{caption}
+\documentclass[11pt]{article}
 
-% amsmath package, useful for mathematical formulas
-\usepackage{amsmath}
+\usepackage[a4paper]{geometry}
+\usepackage{eacl2017}
+\usepackage{times}
+\usepackage{url}
+\usepackage{latexsym}
 
-% amssymb package, useful for mathematical symbols
-\usepackage{amssymb}
+\eaclfinalcopy % Uncomment this line for the final submission
+%\def\eaclpaperid{***} %  Enter the acl Paper ID here
 
-% hyperref package, useful for hyperlinks
-\usepackage{hyperref}
+%\setlength\titlebox{5cm}
+% You can expand the titlebox if you need extra space
+% to show all the authors. Please do not make the titlebox
+% smaller than 5cm (the original size); we will check this
+% in the camera-ready version and ask you to change it back.
 
-% graphicx package, useful for including eps and pdf graphics
-% include graphics with the command \includegraphics
-\usepackage{graphicx}
-
-% Sweave(-like)
-\usepackage{fancyvrb}
-\DefineVerbatimEnvironment{Sinput}{Verbatim}{fontshape=sl}
-\DefineVerbatimEnvironment{Soutput}{Verbatim}{}
-\DefineVerbatimEnvironment{Scode}{Verbatim}{fontshape=sl}
-\newenvironment{Schunk}{}{}
-\DefineVerbatimEnvironment{Code}{Verbatim}{}
-\DefineVerbatimEnvironment{CodeInput}{Verbatim}{fontshape=sl}
-\DefineVerbatimEnvironment{CodeOutput}{Verbatim}{}
-\newenvironment{CodeChunk}{}{}
-
-% cite package, to clean up citations in the main text. Do not remove.
-\usepackage{cite}
-
-\usepackage{color}
-
-% Use doublespacing - comment out for single spacing
-%\usepackage{setspace}
-%\doublespacing
-
-
-% % Text layout
-% \topmargin 0.0cm
-% \oddsidemargin 0.5cm
-% \evensidemargin 0.5cm
-% \textwidth 16cm
-% \textheight 21cm
+\newcommand\BibTeX{B{\sc ib}\TeX}
 
 \title{$title$}
 
@@ -59,17 +45,17 @@ $for(author-information)$
 $author-information$
 $endfor$
 
+\date{}
+
 \begin{document}
 
 \maketitle
 
 \begin{abstract}
 $abstract$
-
-\textbf{Keywords:}
-$keywords$
 \end{abstract}
 
 $body$
 
 \end{document}
+
