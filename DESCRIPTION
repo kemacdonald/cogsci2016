@@ -1,9 +1,9 @@
 Package: acl2017
 Title: Create CMCL Proceedings Submission with RMarkdown
 Version: 0.0.0.9000
-Authors@R: person("Zachary", "Burchill", email = "zachary.burchill@rochester.edu", role = c("aut"))
+Authors@R: person("Zachary", "Burchill", email = "zachary.burchill@rochester.edu", role = c("aut","cre"))
 Description: ACL2017 provides an R Markdown LaTeX format and template for
-    authoring a ACL conference submission. Based on Kyle MacDonald's CogSci 2016 template
+    authoring a ACL conference submission. Almost completely Kyle MacDonald's CogSci 2016 template, just slightly modified.
 Depends:
     R (>= 3.2.0)
 License: MIT + file LICENSE
