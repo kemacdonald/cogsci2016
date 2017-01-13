@@ -14,7 +14,8 @@ acl_paper <- function(keep_tex = TRUE,
 
     base <- rmarkdown::pdf_document(template = template,
                                     keep_tex = keep_tex,
-                                    includes = includes)
+                                    includes = includes,
+                                    md_extensions = "+fancy_lists") # you can get rid of this line if you want, I just wanted to use the `fancy_lists` pandoc extension
 
     # Mostly copied from knitr::render_sweave
     base$knitr$opts_knit$out.format <- "sweave"
