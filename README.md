@@ -61,5 +61,5 @@ To start a seperate ``row'' of authors use \AND, as in
 ```
 
 ## Another APA style template
-The `cogsci2016` package is inspired by [Frederik Aust's papaj package](https://github.com/crsh/papaja): Create APA manuscripts with RMarkdown. This is a great resource for creating APA style manuscripts in R Markdown.
+The `acl2017` package is just a slightly edited version of Kyle MacDonald's `cogsci2016`, which is in turn inspired by [Frederik Aust's papaj package](https://github.com/crsh/papaja): Create APA manuscripts with RMarkdown. This is a great resource for creating APA style manuscripts in R Markdown.
 
