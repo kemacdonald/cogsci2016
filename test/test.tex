@@ -1,11 +1,33 @@
-% Template for Cogsci submission with R Markdown
+%
+% File eacl2017.tex
+%
+%% Based on the style files for ACL-2016
+%% Based on the style files for ACL-2015, with some improvements
+%%  taken from the NAACL-2016 style
+%% Based on the style files for ACL-2014, which were, in turn,
+%% Based on the style files for ACL-2013, which were, in turn,
+%% Based on the style files for ACL-2012, which were, in turn,
+%% based on the style files for ACL-2011, which were, in turn,
+%% based on the style files for ACL-2010, which were, in turn,
+%% based on the style files for ACL-IJCNLP-2009, which were, in turn,
+%% based on the style files for EACL-2009 and IJCNLP-2008...
 
-% Stuff changed from original Markdown PLOS Template
-\documentclass[10pt, letterpaper]{article}
+%% Based on the style files for EACL 2006 by
+%%e.agirre@ehu.es or Sergi.Balari@uab.es
+%% and that of ACL 08 by Joakim Nivre and Noah Smith
 
-\usepackage{cogsci}
-\usepackage{pslatex}
+\documentclass[11pt]{article}
+
+\usepackage[a4paper]{geometry}
+\usepackage{eacl2017}
+\usepackage{times}
+\usepackage{url}
+\usepackage{latexsym}
+
+% Added from MacDonald's .tex file ----------------------------
+
 \usepackage{float}
+\usepackage{caption}
 
 % amsmath package, useful for mathematical formulas
 \usepackage{amsmath}
@@ -31,47 +53,56 @@
 \DefineVerbatimEnvironment{CodeOutput}{Verbatim}{}
 \newenvironment{CodeChunk}{}{}
 
-% cite package, to clean up citations in the main text. Do not remove.
-\usepackage{cite}
-
-\usepackage{color}
-
-% Use doublespacing - comment out for single spacing
-%\usepackage{setspace}
-%\doublespacing
+% -------------------------------------------------------------------------
 
 
-% % Text layout
-% \topmargin 0.0cm
-% \oddsidemargin 0.5cm
-% \evensidemargin 0.5cm
-% \textwidth 16cm
-% \textheight 21cm
+
+% If you have:
+%   final_submission: yes
+%   eaclpaperid: <your ID number>
+% in the .Rmd metadata, it should have automatically
+% added "\eaclfinalcopy" and "\def\eaclpaperid{<your ID number>}" above
+
+
+% You can expand the titlebox if you need extra space
+% to show all the authors. You can do this by uncommenting
+% the line in the Rmd header:
+%   # titlebox_length: "5cm"
+% and substituting it with your own length.
+% Please note that the minimum length is 5cm--they will
+% check it and make you change it if it's smaller than that.
+
+\newcommand\BibTeX{B{\sc ib}\TeX}
 
 \title{How to Make a Camera-Ready Proceedings Contribution}
 
 
 \author{{\large \bf Author 1} \\ \texttt{author1@university.edu} \\ Department of Psychology \\ Some University \And {\large \bf Author 2} \\ \texttt{author1@university.edu} \\ Department of Psychology \\ Some University}
 
+\date{}
+
 \begin{document}
 
 \maketitle
 
 \begin{abstract}
-The abstract should be one paragraph, indented 1/8 inch on both sides,
-in 9 point font with single spacing. The heading Abstract should be 10
-point, bold, centered, with one line space below it. This one-paragraph
-abstract section is required only for standard spoken papers and
-standard posters (i.e., those presentations that will be represented by
-six page papers in the Proceedings).
-
-\textbf{Keywords:}
-Add your choice of indexing terms or keywords; kindly use a semi-colon;
-between each term.
+This document contains the instructions for preparing a camera-ready
+manuscript for the proceedings of EACL-2017. The document itself
+conforms to its own specifications, and is therefore an example of what
+your manuscript should look like. These instructions should be used for
+both papers submitted for review and for final versions of accepted
+papers. Authors are asked to conform to all the directions reported in
+this document.
 \end{abstract}
 
 \section{General Formatting
 Instructions}\label{general-formatting-instructions}
+
+All the default content below is lifted directly from {[}Kyle
+MacDonald's Cogsci 2016{]}
+project(\url{https://github.com/kemacdonald/cogsci2016}), which this
+entire package is based on. I haven't changed it, so it's up to you to
+ignore as you please.
 
 For general information about authoring in markdown, see
 \textbf{\href{http://rmarkdown.rstudio.com/authoring_basics.html}{here}.}
@@ -227,8 +258,8 @@ You can use the xtable function in the xtable package.
   \hline
  & Estimate & Std. Error & t value & Pr($>$$|$t$|$) \\ 
   \hline
-(Intercept) & -0.02 & 0.11 & -0.2 & 0.82 \\ 
-  x & 2.04 & 0.11 & 18.4 & 0.00 \\ 
+(Intercept) & -0.02 & 0.09 & -0.2 & 0.86 \\ 
+  x & 1.97 & 0.10 & 20.5 & 0.00 \\ 
    \hline
 \end{tabular}
 \caption{This table prints across one column.} 
@@ -237,18 +268,23 @@ You can use the xtable function in the xtable package.
 \section{Acknowledgements}\label{acknowledgements}
 
 Place acknowledgments (including funding information) in a section at
-the end of the paper.
+the end of the paper. \cite{APA:83}
 
 \section{References}\label{references}
 
-\setlength{\parindent}{-0.1in} \setlength{\leftskip}{0.125in} \noindent
+\setlength{\parindent}{-0.1in} \setlength{\leftskip}{0.125in}
+\setlength{\parskip}{8pt} \noindent
 
+\hypertarget{refs}{}
+\hypertarget{ref-ChalnickBillman1988a}{}
 Chalnick, A., \& Billman, D. (1988). Unsupervised learning of
 correlational structure. In \emph{Proceedings of the tenth annual
 conference of the cognitive science society} (pp. 510--516). Hillsdale,
 NJ: Lawrence Erlbaum Associates.
 
+\hypertarget{ref-NewellSimon1972a}{}
 Newell, A., \& Simon, H. A. (1972). \emph{Human problem solving}.
 Englewood Cliffs, NJ: Prentice-Hall.
 
 \end{document}
+

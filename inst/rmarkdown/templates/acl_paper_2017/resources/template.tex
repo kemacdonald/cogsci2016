@@ -24,14 +24,60 @@
 \usepackage{url}
 \usepackage{latexsym}
 
-\eaclfinalcopy % Uncomment this line for the final submission
-%\def\eaclpaperid{***} %  Enter the acl Paper ID here
+% Added from MacDonald's .tex file ----------------------------
 
-%\setlength\titlebox{5cm}
+\usepackage{float}
+\usepackage{caption}
+
+% amsmath package, useful for mathematical formulas
+\usepackage{amsmath}
+
+% amssymb package, useful for mathematical symbols
+\usepackage{amssymb}
+
+% hyperref package, useful for hyperlinks
+\usepackage{hyperref}
+
+% graphicx package, useful for including eps and pdf graphics
+% include graphics with the command \includegraphics
+\usepackage{graphicx}
+
+% Sweave(-like)
+\usepackage{fancyvrb}
+\DefineVerbatimEnvironment{Sinput}{Verbatim}{fontshape=sl}
+\DefineVerbatimEnvironment{Soutput}{Verbatim}{}
+\DefineVerbatimEnvironment{Scode}{Verbatim}{fontshape=sl}
+\newenvironment{Schunk}{}{}
+\DefineVerbatimEnvironment{Code}{Verbatim}{}
+\DefineVerbatimEnvironment{CodeInput}{Verbatim}{fontshape=sl}
+\DefineVerbatimEnvironment{CodeOutput}{Verbatim}{}
+\newenvironment{CodeChunk}{}{}
+
+% -------------------------------------------------------------------------
+
+
+
+$if(final_submission)$
+\eaclfinalcopy
+\def\eaclpaperid{$eaclpaperid$}
+$endif$
+% If you have:
+%   final_submission: yes
+%   eaclpaperid: <your ID number>
+% in the .Rmd metadata, it should have automatically
+% added "\eaclfinalcopy" and "\def\eaclpaperid{<your ID number>}" above
+
+$for(titlebox_length)$
+\setlength\titlebox{titlebox_length}
+$endfor$
+
 % You can expand the titlebox if you need extra space
-% to show all the authors. Please do not make the titlebox
-% smaller than 5cm (the original size); we will check this
-% in the camera-ready version and ask you to change it back.
+% to show all the authors. You can do this by uncommenting
+% the line in the Rmd header:
+%   # titlebox_length: "5cm"
+% and substituting it with your own length.
+% Please note that the minimum length is 5cm--they will
+% check it and make you change it if it's smaller than that.
 
 \newcommand\BibTeX{B{\sc ib}\TeX}
 

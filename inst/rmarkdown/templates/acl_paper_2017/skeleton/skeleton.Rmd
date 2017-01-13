@@ -1,18 +1,27 @@
 ---
 title: "How to Make a Camera-Ready Proceedings Contribution"
-bibliography: library.bib
+bibliography: eacl2017.bib
+csl: apa6.csl
 
 author-information: > 
     \author{{\large \bf Author 1} \\ \texttt{author1@university.edu} \\ Department of Psychology \\ Some University
     \And {\large \bf Author 2} \\ \texttt{author1@university.edu} \\ Department of Psychology \\ Some University}
 
 abstract: 
-    "The abstract should be one paragraph, indented 1/8 inch on both sides,
-in 9 point font with single spacing. The heading Abstract should
-be 10 point, bold, centered, with one line space below it. This
-one-paragraph abstract section is required only for standard spoken
-papers and standard posters (i.e., those presentations that will be
-represented by six page papers in the Proceedings)."
+    "This document contains the instructions for preparing a camera-ready
+  manuscript for the proceedings of EACL-2017. The document itself
+  conforms to its own specifications, and is therefore an example of
+  what your manuscript should look like. These instructions should be
+  used for both papers submitted for review and for final versions of
+  accepted papers.  Authors are asked to conform to all the directions
+  reported in this document."
+
+final_submission: no
+# If yes, uncomment line below and add your own ID
+# eaclpaperid: "1234"
+
+# Uncomment and change if you want a smaller titlebox; minimum length is 5cm
+# titlebox_length: "5cm"
 
 output: acl2017::acl_paper
 ---
@@ -30,7 +39,10 @@ library(ggplot2)
 library(xtable)
 ```
 
+
 # General Formatting Instructions 
+
+All the default content below is lifted directly from [Kyle MacDonald's Cogsci 2016 project](https://github.com/kemacdonald/cogsci2016), which this entire package is based on.  I haven't changed it, so it's up to you to ignore as you please.
 
 For general information about authoring in markdown, see **[here](http://rmarkdown.rstudio.com/authoring_basics.html).**
 
@@ -84,10 +96,10 @@ heading.
 Use standard APA citation format. Citations within the text should
 include the author's last name and year. If the authors' names are
 included in the sentence, place only the year in parentheses, as in
-[-@Garnier2007], but otherwise place the entire reference in
+[-@Gusfield97], but otherwise place the entire reference in
 parentheses with the authors and year separated by a comma
-[@Garnier2007]. List multiple references alphabetically and
-separate them by semicolons [@ChalnickBillman1988a; @Garnier2007]. 
+[@Gusfield97]. List multiple references alphabetically and
+separate them by semicolons [@Chandra81; @Gusfield97]. 
 Use the et. al. construction only after listing all the authors to a
 publication in an earlier reference and for citations with four or
 more authors.
@@ -117,18 +129,18 @@ You can read local images using png package for example and plot
 it like a regular plot using grid.raster from the grid package. 
 With this method you have full control of the size of your image. **Note: Image must be in .png file format for the readPNG function to work.**
 
-You might want to display a wide figure across both columns. To do this, you change the `fig.env` chunk option to `figure*`. To align the image in the center of the page, set `fig.align` option to `center`. To format the width of your caption text, you set the `num.cols.cap` option to `2`.
+You might want to display a wide figure across both columns. To do this, you can change the `fig.env` chunk option to `figure*`. To align the image in the center of the page, set `fig.align` option to `center`. 
 
-```{r 2-col-image, fig.env = "figure*", fig.pos = "h", fig.width=4, fig.height=2, fig.align = "center", set.cap.width=T, num.cols.cap=2, fig.cap = "This image spans both columns. And the caption text is limited to 0.8 of the width of the document."}
+```{r 2-col-image, fig.env = "figure*", fig.pos = "h", fig.width=4, fig.height=2, fig.align = "center", fig.cap = "This image spans both columns."}
 img <- png::readPNG("figs/walrus.png")
 grid::grid.raster(img)
 ```
 
 ## One-column images
 
-Single column is the default option, but if you want set it explicitly, set `fig.env` to `figure`. Notice that the `num.cols` option for the caption width is set to `1`.
+Single column is the default option, but if you want set it explicitly, set `fig.env` to `figure`.
 
-```{r image, fig.env = "figure", fig.pos = "H", fig.align='center', fig.width=2, fig.height=2, set.cap.width=T, num.cols.cap=1, fig.cap = "One column image."}
+```{r image, fig.env = "figure", fig.pos = "H", fig.align='center', fig.width=2, fig.height=2, fig.cap = "One column image."}
 img <- png::readPNG("figs/lab_logo_stanford.png")
 grid::grid.raster(img)
 ```
@@ -186,4 +198,6 @@ the end of the paper.
 
 \setlength{\parindent}{-0.1in} 
 \setlength{\leftskip}{0.125in}
+\setlength{\parskip}{8pt}
 \noindent
+
