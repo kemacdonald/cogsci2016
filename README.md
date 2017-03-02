@@ -1,8 +1,8 @@
-# Create ACL/EACL proceedings submission with RMarkdown
-Acl2017 is a R-package that includes a [RMarkdown](http://rmarkdown.rstudio.com/) template to create a camera ready submission to the [Annual Conference of the European Chapter of the Association for Computational Linguistics](http://eacl2017.org/images/site/eacl-2017-template.zip). It uses the LaTeX template designed to format ACL Conference Proceedings.
+# Create ACL/EACL proceedings submission with R Markdown
+Acl2017 is a R-package that includes a [R Markdown](http://rmarkdown.rstudio.com/) template to create a camera ready submission to the [Annual Conference of the European Chapter of the Association for Computational Linguistics](http://eacl2017.org/images/site/eacl-2017-template.zip). It uses the LaTeX template designed to format ACL Conference Proceedings.
 
 ## Important note!!!
-Sadly, the way RMarkdown automatically handles citations ends up basically "hardcoding" the citations in to the .tex file.  Unfortunately, ACL wants a very specific (and very restrictive) way of citing, so I have had to brutalize my perfect adopted baby so that it can actually work with what ACL wants.  That means knitting is now a two-step process. Read the instructions in the automatically generated `.Rmd` file for more information about what to do.
+Sadly, the way R Markdown automatically handles citations ends up basically "hardcoding" the citations in to the .tex file.  Unfortunately, ACL wants a very specific (and very restrictive) way of citing, so I have had to brutalize my perfect adopted baby so that it can actually work with what ACL wants.  That means knitting is now a two-step process. Read the instructions in the automatically generated `.Rmd` file for more information about what to do.
 
 
 ## Setup
