@@ -1,11 +1,33 @@
-% Template for Cogsci submission with R Markdown
+%
+% File eacl2017.tex
+%
+%% Based on the style files for ACL-2016
+%% Based on the style files for ACL-2015, with some improvements
+%%  taken from the NAACL-2016 style
+%% Based on the style files for ACL-2014, which were, in turn,
+%% Based on the style files for ACL-2013, which were, in turn,
+%% Based on the style files for ACL-2012, which were, in turn,
+%% based on the style files for ACL-2011, which were, in turn,
+%% based on the style files for ACL-2010, which were, in turn,
+%% based on the style files for ACL-IJCNLP-2009, which were, in turn,
+%% based on the style files for EACL-2009 and IJCNLP-2008...
 
-% Stuff changed from original Markdown PLOS Template
-\documentclass[10pt, letterpaper]{article}
+%% Based on the style files for EACL 2006 by
+%%e.agirre@ehu.es or Sergi.Balari@uab.es
+%% and that of ACL 08 by Joakim Nivre and Noah Smith
 
-\usepackage{cogsci}
-\usepackage{pslatex}
+\documentclass[11pt]{article}
+
+\usepackage[a4paper]{geometry}
+\usepackage{eacl2017}
+\usepackage{times}
+\usepackage{url}
+\usepackage{latexsym}
+
+% Added from MacDonald's .tex file ----------------------------
+
 \usepackage{float}
+\usepackage{caption}
 
 % amsmath package, useful for mathematical formulas
 \usepackage{amsmath}
@@ -31,27 +53,28 @@
 \DefineVerbatimEnvironment{CodeOutput}{Verbatim}{}
 \newenvironment{CodeChunk}{}{}
 
-% cite package, to clean up citations in the main text. Do not remove.
-\usepackage{cite}
-
-\usepackage{color}
-
-% Use doublespacing - comment out for single spacing
-%\usepackage{setspace}
-%\doublespacing
+% -------------------------------------------------------------------------
 
 
-% % Text layout
-% \topmargin 0.0cm
-% \oddsidemargin 0.5cm
-% \evensidemargin 0.5cm
-% \textwidth 16cm
-% \textheight 21cm
+
+% Uncomment this line for the final submission
+%\def\eaclpaperid{***} %  Enter the acl Paper ID here
+
+
+%\setlength\titlebox{5cm}
+% You can expand the titlebox if you need extra space
+% to show all the authors. Please do not make the titlebox
+% smaller than 5cm (the original size); we will check this
+% in the camera-ready version and ask you to change it back.
+
+\newcommand\BibTeX{B{\sc ib}\TeX}
 
 \title{How to Make a Camera-Ready Proceedings Contribution}
 
 
 \author{{\large \bf Author 1} \\ \texttt{author1@university.edu} \\ Department of Psychology \\ Some University \And {\large \bf Author 2} \\ \texttt{author1@university.edu} \\ Department of Psychology \\ Some University}
+
+\date{}
 
 \begin{document}
 
@@ -61,20 +84,13 @@
 The abstract should be one paragraph, indented 1/8 inch on both sides,
 in 9 point font with single spacing. The heading Abstract should be 10
 point, bold, centered, with one line space below it. This one-paragraph
-abstract section is required only for standard spoken papers and
+abstdddddddract section is required only for standard spoken papers and
 standard posters (i.e., those presentations that will be represented by
 six page papers in the Proceedings).
-
-\textbf{Keywords:}
-Add your choice of indexing terms or keywords; kindly use a semi-colon;
-between each term.
 \end{abstract}
 
 \section{General Formatting
 Instructions}\label{general-formatting-instructions}
-
-For general information about authoring in markdown, see
-\textbf{\href{http://rmarkdown.rstudio.com/authoring_basics.html}{here}.}
 
 For standard spoken papers and standard posters, the entire contribution
 (including figures, references, everything) can be no longer than six
@@ -127,12 +143,13 @@ Floats}\label{formalities-footnotes-and-floats}
 Use standard APA citation format. Citations within the text should
 include the author's last name and year. If the authors' names are
 included in the sentence, place only the year in parentheses, as in
-(1972), but otherwise place the entire reference in parentheses with the
-authors and year separated by a comma (Newell \& Simon, 1972). List
-multiple references alphabetically and separate them by semicolons
-(Chalnick \& Billman, 1988; Newell \& Simon, 1972). Use the et. al.
-construction only after listing all the authors to a publication in an
-earlier reference and for citations with four or more authors.
+(2007), but otherwise place the entire reference in parentheses with the
+authors and year separated by a comma (Garnier, Gautrais, and Theraulaz
+2007). List multiple references alphabetically and separate them by
+semicolons (Chalnick and Billman 1988; Garnier, Gautrais, and Theraulaz
+2007). Use the et. al. construction only after listing all the authors
+to a publication in an earlier reference and for citations with four or
+more authors.
 
 For more information on citations in R Markdown, see
 \textbf{\href{http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html\#citations}{here}.}
@@ -162,36 +179,22 @@ you have full control of the size of your image. \textbf{Note: Image
 must be in .png file format for the readPNG function to work.}
 
 You might want to display a wide figure across both columns. To do this,
-you can change the \texttt{fig.env} chunk option to \texttt{figure*}. To
+you change the \texttt{fig.env} chunk option to \texttt{figure*}. To
 align the image in the center of the page, set \texttt{fig.align} option
-to \texttt{center}.
+to \texttt{center}. To format the width of your caption text, you set
+the \texttt{num.cols.cap} option to \texttt{2}.
 
 \begin{CodeChunk}
-\begin{figure*}[h]
-
-{\centering \includegraphics{figs/2-col-image-1} 
-
-}
-
-\caption[This image spans both columns]{This image spans both columns.}\label{fig:2-col-image}
-\end{figure*}
-\end{CodeChunk}
+\captionsetup{width=0.8\textwidth}\end{CodeChunk}
 
 \subsection{One-column images}\label{one-column-images}
 
 Single column is the default option, but if you want set it explicitly,
-set \texttt{fig.env} to \texttt{figure}.
+set \texttt{fig.env} to \texttt{figure}. Notice that the
+\texttt{num.cols} option for the caption width is set to \texttt{1}.
 
 \begin{CodeChunk}
-\begin{figure}[H]
-
-{\centering \includegraphics{figs/image-1} 
-
-}
-
-\caption[One column image]{One column image.}\label{fig:image}
-\end{figure}
-\end{CodeChunk}
+\captionsetup{width=0.8\columnwidth}\end{CodeChunk}
 
 \subsection{R Plots}\label{r-plots}
 
@@ -227,8 +230,8 @@ You can use the xtable function in the xtable package.
   \hline
  & Estimate & Std. Error & t value & Pr($>$$|$t$|$) \\ 
   \hline
-(Intercept) & -0.02 & 0.11 & -0.2 & 0.82 \\ 
-  x & 2.04 & 0.11 & 18.4 & 0.00 \\ 
+(Intercept) & -0.08 & 0.11 & -0.7 & 0.48 \\ 
+  x & 2.16 & 0.11 & 19.9 & 0.00 \\ 
    \hline
 \end{tabular}
 \caption{This table prints across one column.} 
@@ -243,12 +246,18 @@ the end of the paper.
 
 \setlength{\parindent}{-0.1in} \setlength{\leftskip}{0.125in} \noindent
 
-Chalnick, A., \& Billman, D. (1988). Unsupervised learning of
-correlational structure. In \emph{Proceedings of the tenth annual
-conference of the cognitive science society} (pp. 510--516). Hillsdale,
-NJ: Lawrence Erlbaum Associates.
+\hypertarget{refs}{}
+\hypertarget{ref-ChalnickBillman1988a}{}
+Chalnick, A., and D. Billman. 1988. ``Unsupervised Learning of
+Correlational Structure.'' In \emph{Proceedings of the Tenth Annual
+Conference of the Cognitive Science Society}, 510--16. Hillsdale, NJ:
+Lawrence Erlbaum Associates.
 
-Newell, A., \& Simon, H. A. (1972). \emph{Human problem solving}.
-Englewood Cliffs, NJ: Prentice-Hall.
+\hypertarget{ref-Garnier2007}{}
+Garnier, Simon, Jacques Gautrais, and Guy Theraulaz. 2007. ``The
+biological principles of swarm intelligence.'' \emph{Swarm Intelligence}
+1 (1): 3--31.
+doi:\href{https://doi.org/10.1007/s11721-007-0004-y}{10.1007/s11721-007-0004-y}.
 
 \end{document}
+

@@ -1,25 +1,27 @@
 ---
 title: "How to Make a Camera-Ready Proceedings Contribution"
-bibliography: library.bib
-csl: apa6.csl
-document-params: "10pt, letterpaper"
 
 author-information: > 
     \author{{\large \bf Author 1} \\ \texttt{author1@university.edu} \\ Department of Psychology \\ Some University
     \And {\large \bf Author 2} \\ \texttt{author1@university.edu} \\ Department of Psychology \\ Some University}
 
 abstract: 
-    "The abstract should be one paragraph, indented 1/8 inch on both sides,
-in 9 point font with single spacing. The heading Abstract should
-be 10 point, bold, centered, with one line space below it. This
-one-paragraph abstract section is required only for standard spoken
-papers and standard posters (i.e., those presentations that will be
-represented by six page papers in the Proceedings)."
-    
-keywords:
-    "Add your choice of indexing terms or keywords; kindly use a semi-colon; between each term."
-    
-output: cogsci2016::cogsci_paper
+    "This document contains the instructions for preparing a camera-ready
+  manuscript for the proceedings of EACL-2017. The document itself
+  conforms to its own specifications, and is therefore an example of
+  what your manuscript should look like. These instructions should be
+  used for both papers submitted for review and for final versions of
+  accepted papers.  Authors are asked to conform to all the directions
+  reported in this document."
+
+final_submission: no
+# If yes, uncomment line below and add your own ID
+# eaclpaperid: "1234"
+
+# Uncomment and change if you want a smaller titlebox; minimum length is 5cm
+# titlebox_length: "5cm"
+
+output: acl2017::acl_paper
 ---
 
 ```{r global_options, include=FALSE}
@@ -35,9 +37,41 @@ library(ggplot2)
 library(xtable)
 ```
 
+
+# Important citation stuff! READ!
+
+## Why we can't have nice things
+
+So because the ACL committee wants their `.tex` files all nice and consistent, the old version of this package isn't good for what they want.  The Markdown-to-Latex conversion would automatically add in the references and citations, but would literally hardcode them into the `.tex` file.  We can't have that, now can we?  The only ways you were allowed to cite in your `.tex` file was with `\cite{Gusfield97}`, `\shortcite{Gusfield97}`, or `\newcite{Gusfield97}`, which corresponded to "(Gusfield, 1997)", "(1997)", or "Gusfield (1997)", respectively.
+
+This means you couldn't do anything like "(e.g., Gusfield, 2017)", and their `.bst` file was incompatible with `natbib`. Obviously.  However, I have come to the rescue.  In the `eacl2017.sty` file in this package, I have added my own bit of magic: the `\barecite{}` command, which corresponds to "Burchill, 2017".  Notice this version doesn't have parentheses, so you can get stuff like "(e.g., Burchill, 2017)" with `(e.g., \barecite{Gusfield97})`.  Just be careful about making sure you don't forget parentheses.  Also not that when you submit the `.zip` folder, you should make sure to include the edited `eacl2017.sty` file.
+
+## Examples
+
+ * `\cite{Gusfield97}` becomes \cite{Gusfield97}
+ * `\shortcite{Gusfield97}` becomes \shortcite{Gusfield97}
+ * `\newcite{Gusfield97}` becomes \newcite{Gusfield97}
+ * `\barecite{Gusfield97}` becomes \barecite{Gusfield97}
+ * `\cite{Gusfield97,Aho72}` becomes \cite{Gusfield97,Aho72}
+ * `\barecite{Gusfield97,Aho72}` becomes \barecite{Gusfield97,Aho72}
+ 
+**Wait, _are those citations appearing as question marks?_  Don't worry, read on!**
+
+## The two-step process of knitting this file
+
+Because the ACL's you-need-to-use-our-citing-function formatting doesn't work well with R Markdown--which really likes to compile its own citations--knitting this is now a two-step process.  After you get it how you want it in RMarkdown, knit as usual.  You'll see that all citations are question marks, and that the bibliography is missing.  This is natural, don't panic.
+
+For the current purposes, let's assume this file we're in right now is called `acl_draft.Rmd`.  Navigate into the directory containing `acl_draft.Rmd` via a terminal.  Then run the following command (swapping out your actual file name for "acl_draft")
+
+`pdflatex acl_draft.tex; pdflatex acl_draft.tex; bibtex acl_draft.aux; pdflatex acl_draft.tex; pdflatex acl_draft.tex`
+
+Now, check the `.pdf` file.  If all went well, it should now have all the citations in it as well as the reference section.  Good luck!
+
 # General Formatting Instructions 
 
-For general information about authoring in markdown, see **[here](http://rmarkdown.rstudio.com/authoring_basics.html).**
+All the default content below is lifted directly from Kyle MacDonald's Cogsci 2016 project (https://github.com/kemacdonald/cogsci2016), which this entire package is based on.  I haven't changed it, so it's up to you to ignore as you please.
+
+For general information about authoring in markdown, see **http://rmarkdown.rstudio.com/authoring_basics.html.**
 
 For standard spoken papers and standard posters, the entire 
 contribution (including figures, references, everything) can be 
@@ -86,19 +120,6 @@ heading.
 
 # Formalities, Footnotes, and Floats
 
-Use standard APA citation format. Citations within the text should
-include the author's last name and year. If the authors' names are
-included in the sentence, place only the year in parentheses, as in
-[-@NewellSimon1972a], but otherwise place the entire reference in
-parentheses with the authors and year separated by a comma
-[@NewellSimon1972a]. List multiple references alphabetically and
-separate them by semicolons [@ChalnickBillman1988a; @NewellSimon1972a]. 
-Use the et. al. construction only after listing all the authors to a
-publication in an earlier reference and for citations with four or
-more authors.
-
-For more information on citations in R Markdown, see **[here](http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html#citations).**
-
 ## Footnotes
 
 Indicate footnotes with a number\footnote{Sample of the first
@@ -142,7 +163,7 @@ grid::grid.raster(img)
 ## R Plots
 
 You can use R chunks directly to plot graphs. And you can use latex floats in the
-fig.pos chunk option to have more control over the location of your plot on the page. For more information on latex placement specifiers see **[here](https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions)**
+fig.pos chunk option to have more control over the location of your plot on the page. For more information on latex placement specifiers see **https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions**
 
 ```{r plot, fig.env="figure", fig.pos = "H", fig.align = "center", fig.width=2, fig.height=2, fig.cap = "R plot" }
 x <- 0:100
@@ -182,13 +203,13 @@ print(tab1, type="latex", comment = F, table.placement = "H")
 Place acknowledgments (including funding information) in a section at
 the end of the paper.
 
-# References 
-
 ```{r}
-# References will be generated automatically by Pandoc and included here.
-# The following code is some latex to format the bibliography. Do not remove it.
+# References will be generated after this point after you run the following command. <file> is this file, but without the extension.  You should include the full path if you aren't running the command in the same directory.  This command should be run in a terminal, btw.
+
+# The command:
+# pdflatex <file>.tex; pdflatex <file>.tex; bibtex <file>.aux; pdflatex <file>.tex; pdflatex <file>.tex
+
+# After running this command, check the new pdf file. It should hopefully have all the citations added in.
 ```
 
-\setlength{\parindent}{-0.1in} 
-\setlength{\leftskip}{0.125in}
-\noindent
+

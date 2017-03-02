@@ -1,23 +1,27 @@
-# Create CogSci proceedings submission with RMarkdown
-Cogsci2016 is a R-package that includes a [RMarkdown](http://rmarkdown.rstudio.com/) template to create a camera ready submission to the [Annual Cognitive Science Society Conference](http://cognitivesciencesociety.org/conference2016/submissions.html). It uses the LaTeX template designed to format CogSci Conference Proceedings.
+# Create ACL/EACL proceedings submission with R Markdown
+Acl2017 is a R-package that includes a [R Markdown](http://rmarkdown.rstudio.com/) template to create a camera ready submission to the [Annual Conference of the European Chapter of the Association for Computational Linguistics](http://eacl2017.org/images/site/eacl-2017-template.zip). It uses the LaTeX template designed to format ACL Conference Proceedings.
+
+## Important note!!!
+Sadly, the way R Markdown automatically handles citations ends up basically "hardcoding" the citations in to the .tex file.  Unfortunately, ACL wants a very specific (and very restrictive) way of citing, so I have had to brutalize my perfect adopted baby so that it can actually work with what ACL wants.  That means knitting is now a two-step process. Read the instructions in the automatically generated `.Rmd` file for more information about what to do.
+
 
 ## Setup
 ### Requirements
-To use `cogsci2016`, make sure the following software is installed:
+To use `acl2017`, make sure the following software is installed:
 
 - [R](http://www.r-project.org/) (2.11.1 or later)
 - [RStudio](http://www.rstudio.com/) (0.98.932 or later) is optional; if you don't use RStudio, you need to install [pandoc](http://johnmacfarlane.net/pandoc/) using the [instructions for your operating system](https://github.com/rstudio/rmarkdown/blob/master/PANDOC.md)
 - A [TeX](http://de.wikipedia.org/wiki/TeX) distribution (2013 or later; e.g., [MikTeX](http://miktex.org/) for Windows, [MacTeX](https://tug.org/mactex/) for Mac, or [TeX Live](http://www.tug.org/texlive/) for Linux)
  
-### Install cogsci2016
-Install `cogsci2016` from this GitHub repository:
+### Install acl2017
+Install `acl2017` from this GitHub repository:
 
 ```S
-devtools::install_github("kemacdonald/cogsci2016")
+devtools::install_github("burchill/acl2017")
 ```
 
 ### Create a manuscript
-Once you have installed the `cogsci2016` package you can select the CogSci template when creating a new Markdown file through the menus in RStudio.
+Once you have installed the `acl2017` package you can select the CogSci template when creating a new Markdown file through the menus in RStudio.
 
 <img src="http://stanford.edu/~kylem4/cogsci2016.png" alt="menu select" width="400px" height="300px"">
 
@@ -61,5 +65,5 @@ To start a seperate ``row'' of authors use \AND, as in
 ```
 
 ## Another APA style template
-The `cogsci2016` package is inspired by [Frederik Aust's papaj package](https://github.com/crsh/papaja): Create APA manuscripts with RMarkdown. This is a great resource for creating APA style manuscripts in R Markdown.
+The `acl2017` package is just a slightly edited version of Kyle MacDonald's `cogsci2016`, which is in turn inspired by [Frederik Aust's papaj package](https://github.com/crsh/papaja): Create APA manuscripts with RMarkdown. This is a great resource for creating APA style manuscripts in R Markdown.
 

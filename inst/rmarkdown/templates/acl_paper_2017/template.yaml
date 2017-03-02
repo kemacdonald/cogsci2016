@@ -1,0 +1,4 @@
+name: ACL Submission
+description: >
+  Template for creating an article for submission to the Annual Conference of the European Chapter of the Association for Computational Linguistics.
+create_dir: true
