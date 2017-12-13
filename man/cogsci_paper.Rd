@@ -12,4 +12,3 @@ cogsci_paper(keep_tex = TRUE, includes = NULL)
 \description{
 Template for creating a CogSci submission
 }
-

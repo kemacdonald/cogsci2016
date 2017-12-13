@@ -34,16 +34,6 @@ cogsci_paper <- function(keep_tex = TRUE,
         paste0('\\begin{CodeOutput}\n', x, '\\end{CodeOutput}\n')
     }
 
-    knitr::knit_hooks$set(set.cap.width = function(before, options, envir) {
-        if (before) {
-            if(options$num.cols.cap == 2) {
-                return("\\captionsetup{width=0.8\\textwidth}")
-            } else {
-                return("\\captionsetup{width=0.8\\columnwidth}")
-            }
-        }
-    })
-
     base$knitr$knit_hooks$chunk   <- hook_chunk
     base$knitr$knit_hooks$source  <- hook_input
     base$knitr$knit_hooks$output  <- hook_output
