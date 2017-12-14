@@ -13,13 +13,13 @@ To use `cogsci2016`, make sure the following software is installed:
 Install `cogsci2016` from this GitHub repository:
 
 ```S
-devtools::install_github("kemacdonald/cogsci2016")
+devtools::install_github("kemacdonald/cogsci2016?raw=true")
 ```
 
 ### Create a manuscript
 Once you have installed the `cogsci2016` package you can select the CogSci template when creating a new Markdown file through the menus in RStudio.
 
-<img src="imgs/cogsci2016.png" alt="menu select" width="400px" height="300px"">
+![](imgs/cogsci2016.png?raw=true)
 
 When you select "OK" you will create a directory that contains the following folders/files:
 
