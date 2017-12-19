@@ -13,7 +13,7 @@ To use `cogsci2016`, make sure the following software is installed:
 Install `cogsci2016` from this GitHub repository:
 
 ```S
-devtools::install_github("kemacdonald/cogsci2016?raw=true")
+devtools::install_github("kemacdonald/cogsci2016")
 ```
 
 ### Create a manuscript
