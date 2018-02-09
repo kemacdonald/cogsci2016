@@ -23,7 +23,6 @@ output: cogsci2016::cogsci_paper
 ---
 
 ```{r global_options, include=FALSE}
-rm(list=ls())
 knitr::opts_chunk$set(fig.width=3, fig.height=3, fig.crop = F, fig.pos = "tb", fig.path='figs/',
                       echo=F, warning=F, cache=F, message=F, sanitize = T)
 ```
@@ -97,14 +96,17 @@ Use the et. al. construction only after listing all the authors to a
 publication in an earlier reference and for citations with four or
 more authors.
 
-For more information on citations in R Markdown, see **[here](http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html#citations).**
+For more information on citations in RMarkdown, see **[here](http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html#citations).**
 
 ## Footnotes
 
 Indicate footnotes with a number\footnote{Sample of the first
 footnote.} in the text. Place the footnotes in 9 point type at the
 bottom of the page on which they appear. Precede the footnote with a
-horizontal rule.\footnote{Sample of the second footnote.}
+horizontal rule.\footnote{Sample of the second footnote.} You can also use 
+markdown formatting to include footnotes using this syntax [^1].
+
+[^1]: Sample of a markdown footnote.
 
 ## Figures
 

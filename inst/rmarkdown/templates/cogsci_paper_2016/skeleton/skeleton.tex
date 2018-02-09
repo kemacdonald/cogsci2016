@@ -6,6 +6,7 @@
 \usepackage{cogsci}
 \usepackage{pslatex}
 \usepackage{float}
+\usepackage{caption}
 
 % amsmath package, useful for mathematical formulas
 \usepackage{amsmath}
@@ -144,6 +145,9 @@ footnote.} in the text. Place the footnotes in 9 point type at the
 bottom of the page on which they appear. Precede the footnote with a
 horizontal rule.\footnote{Sample of the second footnote.}
 
+You can also use markdown formatting to include footnotes using this
+syntax.\footnote{Sample of a markdown footnote.}
+
 \subsection{Figures}\label{figures}
 
 All artwork must be very dark for purposes of reproduction and should
@@ -162,9 +166,10 @@ you have full control of the size of your image. \textbf{Note: Image
 must be in .png file format for the readPNG function to work.}
 
 You might want to display a wide figure across both columns. To do this,
-you can change the \texttt{fig.env} chunk option to \texttt{figure*}. To
+you change the \texttt{fig.env} chunk option to \texttt{figure*}. To
 align the image in the center of the page, set \texttt{fig.align} option
-to \texttt{center}.
+to \texttt{center}. To format the width of your caption text, you set
+the \texttt{num.cols.cap} option to \texttt{2}.
 
 \begin{CodeChunk}
 \begin{figure*}[h]
@@ -173,14 +178,15 @@ to \texttt{center}.
 
 }
 
-\caption[This image spans both columns]{This image spans both columns.}\label{fig:2-col-image}
+\caption[This image spans both columns]{This image spans both columns. And the caption text is limited to 0.8 of the width of the document.}\label{fig:2-col-image}
 \end{figure*}
 \end{CodeChunk}
 
 \subsection{One-column images}\label{one-column-images}
 
 Single column is the default option, but if you want set it explicitly,
-set \texttt{fig.env} to \texttt{figure}.
+set \texttt{fig.env} to \texttt{figure}. Notice that the
+\texttt{num.cols} option for the caption width is set to \texttt{1}.
 
 \begin{CodeChunk}
 \begin{figure}[H]
@@ -196,8 +202,8 @@ set \texttt{fig.env} to \texttt{figure}.
 \subsection{R Plots}\label{r-plots}
 
 You can use R chunks directly to plot graphs. And you can use latex
-floats in the \texttt{fig.pos} chunk option to have more control over
-the location of your plot on the page. For more information on latex
+floats in the fig.pos chunk option to have more control over the
+location of your plot on the page. For more information on latex
 placement specifiers see
 \textbf{\href{https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions}{here}}
 
@@ -221,17 +227,18 @@ bottom of a column, set wide tables across both columns.
 
 You can use the xtable function in the xtable package.
 
-\begin{table*}[H]
+\begin{table}[H]
 \centering
 \begin{tabular}{rrrrr}
   \hline
  & Estimate & Std. Error & t value & Pr($>$$|$t$|$) \\ 
   \hline
-(Intercept) & 0.14 & 0.10 & 1.5 & 0.14 \\ 
-  x & 2.04 & 0.09 & 22.6 & 0.00 \\ 
+(Intercept) & -0.19 & 0.10 & -1.9 & 0.06 \\ 
+  x & 2.05 & 0.10 & 19.7 & 0.00 \\ 
    \hline
 \end{tabular}
-\end{table*}
+\caption{This table prints across one column.} 
+\end{table}
 
 \section{Acknowledgements}\label{acknowledgements}
 
@@ -242,11 +249,14 @@ the end of the paper.
 
 \setlength{\parindent}{-0.1in} \setlength{\leftskip}{0.125in} \noindent
 
+\hypertarget{refs}{}
+\hypertarget{ref-ChalnickBillman1988a}{}
 Chalnick, A., \& Billman, D. (1988). Unsupervised learning of
 correlational structure. In \emph{Proceedings of the tenth annual
 conference of the cognitive science society} (pp. 510--516). Hillsdale,
 NJ: Lawrence Erlbaum Associates.
 
+\hypertarget{ref-NewellSimon1972a}{}
 Newell, A., \& Simon, H. A. (1972). \emph{Human problem solving}.
 Englewood Cliffs, NJ: Prentice-Hall.
 
