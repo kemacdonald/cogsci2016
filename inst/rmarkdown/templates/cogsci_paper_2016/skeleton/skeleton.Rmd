@@ -1,30 +1,30 @@
 ---
 title: "How to Make a Camera-Ready Proceedings Contribution"
 bibliography: library.bib
-csl: apa6.csl
 document-params: "10pt, letterpaper"
 
 author-information: > 
     \author{{\large \bf Author 1} \\ \texttt{author1@university.edu} \\ Department of Psychology \\ Some University
     \And {\large \bf Author 2} \\ \texttt{author1@university.edu} \\ Department of Psychology \\ Some University}
 
-abstract: 
-    "The abstract should be one paragraph, indented 1/8 inch on both sides,
-in 9 point font with single spacing. The heading Abstract should
-be 10 point, bold, centered, with one line space below it. This
-one-paragraph abstract section is required only for standard spoken
-papers and standard posters (i.e., those presentations that will be
-represented by six page papers in the Proceedings)."
+abstract: >
+    The abstract should be one paragraph, indented 1/8 inch on both sides,in 9 point font with       single spacing. The heading Abstract should be 10 point, bold, centered, with one line space
+    below it. This one-paragraph abstract section is required only for standard spoken papers and
+    standard posters (i.e., those presentations that will be represented by six page papers in
+    the Proceedings).
     
-keywords:
-    "Add your choice of indexing terms or keywords; kindly use a semi-colon; between each term."
+keywords: >
+    Add your choice of indexing terms or keywords; kindly use a semi-colon; between each term.
     
 output: cogsci2016::cogsci_paper
+#final-submission: \cogscifinalcopy
 ---
 
 ```{r global_options, include=FALSE}
-knitr::opts_chunk$set(fig.width=3, fig.height=3, fig.crop = F, fig.pos = "tb", fig.path='figs/',
-                      echo=F, warning=F, cache=F, message=F, sanitize = T)
+knitr::opts_chunk$set(fig.width=3, fig.height=3, fig.crop = F, 
+                      fig.pos = "tb", fig.path='figs/',
+                      echo=F, warning=F, cache=F, 
+                      message=F, sanitize = T)
 ```
 
 ```{r, libraries}

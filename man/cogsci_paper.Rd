@@ -8,6 +8,9 @@ cogsci_paper(keep_tex = TRUE, includes = NULL)
 }
 \arguments{
 \item{keep_tex}{Keep the intermediate tex file used in the conversion to PDF}
+
+\item{includes}{add other arguments to the \code{cogsci2016::pdf_document()}
+function}
 }
 \description{
 Template for creating a CogSci submission
