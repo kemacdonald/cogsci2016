@@ -1,6 +1,10 @@
 # Create CogSci proceedings submission with RMarkdown
 Cogsci2016 is a R-package that includes a [RMarkdown](http://rmarkdown.rstudio.com/) template to create a camera ready submission to the [Annual Cognitive Science Society Conference](http://cognitivesciencesociety.org/conference2016/submissions.html). It uses the LaTeX template designed to format CogSci Conference Proceedings.
 
+### Package versions and change log
+
+Please check the [NEWS](https://github.com/kemacdonald/cogsci2016/tree/blind_submission/NEWS.md) page to review changes to different versions of the package. 
+
 ## Setup
 ### Requirements
 To use `cogsci2016`, make sure the following software is installed:
