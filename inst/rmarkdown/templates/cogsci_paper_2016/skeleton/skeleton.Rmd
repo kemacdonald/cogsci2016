@@ -1,6 +1,7 @@
 ---
 title: "How to Make a Proceedings Paper Submission"
 bibliography: library.bib
+csl: apa6.csl
 document-params: "10pt, letterpaper"
 
 author-information: > 
