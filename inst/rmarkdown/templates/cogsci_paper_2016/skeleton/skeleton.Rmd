@@ -53,8 +53,8 @@ between the last author listed and the text of the paper; the text of
 the paper (starting with the abstract) should begin no less than 2.75 inches below the top of the
 page. The left margin should be 0.75 inches and the top margin should
 be 1 inch.  \textbf{The right and bottom margins will depend on
-  whether you use U.S. letter or A4 paper, so you must be sure to
-  measure the width of the printed text.} Use 10~point Times Roman
+whether you use U.S. letter or A4 paper, so you must be sure to
+measure the width of the printed text.} Use 10~point Times Roman
 with 12~point vertical spacing, unless otherwise specified.
 
 The title should be in 14~point bold font, centered. The title should
@@ -158,7 +158,7 @@ x <- 0:100
 y <- 2 * (x + rnorm(length(x), sd = 3) + 3)
 
 ggplot2::ggplot(data = data.frame(x, y), 
-       aes(x = x, y = y)) + 
+                aes(x = x, y = y)) + 
   geom_point() + 
   geom_smooth(method = "lm")
 ```
@@ -181,7 +181,7 @@ y <- 2*x + rnorm(n)
 out <- lm(y ~ x)
 
 tab1 <- xtable::xtable(summary(out)$coef, digits=c(0, 2, 2, 1, 2), 
-                      caption = "This table prints across one column.")
+                       caption = "This table prints across one column.")
 
 print(tab1, type="latex", comment = F, table.placement = "H")
 ```

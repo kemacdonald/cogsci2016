@@ -2,7 +2,8 @@
 
 ###  Major changes
 
-- `final-submission: \cogscifinalcopy` line added to yaml. If this line is commented
+- Updated package to create anonymized submission, which is a new requirement for CogSci 2019. See this [link](https://github.com/rlevy/cogsci-template) for more information about the updated latex template used in this version of the package.
+    - `final-submission: \cogscifinalcopy` line added to yaml. If this line is commented
     out using the `#` character, then the submission will be anonymized. 
 
 ### Minor changes
