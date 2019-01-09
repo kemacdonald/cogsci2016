@@ -1,7 +1,12 @@
 # Create CogSci proceedings submission with RMarkdown
 Cogsci2016 is a R-package that includes a [RMarkdown](http://rmarkdown.rstudio.com/) template to create a camera ready submission to the [Annual Cognitive Science Society Conference](http://cognitivesciencesociety.org/conference2016/submissions.html). It uses the LaTeX template designed to format CogSci Conference Proceedings.
 
+### Package versions and change log
+
+Please check the [NEWS](https://github.com/kemacdonald/cogsci2016/tree/blind_submission/NEWS.md) page to review changes to different versions of the package. 
+
 ## Setup
+
 ### Requirements
 To use `cogsci2016`, make sure the following software is installed:
 
@@ -24,7 +29,7 @@ Once you have installed the `cogsci2016` package you can select the CogSci templ
 When you select "OK" you will create a directory that contains the following folders/files:
 
 * library.bib (bibtex database of all reference-list entries)
-* apa6.csl (for creating apa style citations)
+* apacite.csl, apacite.bst (for creating apa style citations)
 * figs (folder to store local images)
 * .Rmd (R Markdown file)
 * cogsci.sty (CogSci specific styles in latex)
@@ -32,6 +37,12 @@ When you select "OK" you will create a directory that contains the following fol
 There is more information about authoring in R Markdown located in the cogsci2016 template .Rmd file.
 
 ### Author information
+
+⚠️ New feature in `cogsci2016` **version 1.0**, which allows you to create an 
+anonymized version of your document:
+
+- `final-submission: \cogscifinalcopy` line added to yaml. If this line is commented
+    out using the `#` character, then the submission will be anonymized. 
 
 Note that there is some latex in the document header (the YAML). This allows you to 
 format the author and affiliation information. Here is the latex code for different author styles from the CogSci submissions package.

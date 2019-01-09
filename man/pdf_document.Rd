@@ -11,8 +11,20 @@ pdf_document(toc = FALSE, toc_depth = 2, number_sections = FALSE,
   includes = NULL, md_extensions = NULL, pandoc_args = NULL)
 }
 \arguments{
+\item{toc}{\code{TRUE} to include a table of contents in the output}
+
+\item{toc_depth}{Depth of headers to include in table of contents}
+
+\item{number_sections}{\code{TRUE} to number section headings}
+
+\item{fig_width}{Default width (in inches) for figures}
+
+\item{fig_height}{Default height (in inches) for figures}
+
 \item{fig_crop}{\code{TRUE} to automatically apply the \code{pdfcrop} utility
 (if available) to pdf figures}
+
+\item{fig_caption}{\code{TRUE} to render figures with captions}
 
 \item{dev}{Graphics device to use for figure output (defaults to pdf)}
 
@@ -31,6 +43,15 @@ templates} for more details.}
 
 \item{latex_engine}{LaTeX engine for producing PDF output. Options are
 "pdflatex", "lualatex", and "xelatex".}
+
+\item{includes}{Named list of additional content to include within the
+document (typically created using the \code{\link{includes}} function).}
+
+\item{md_extensions}{Markdown extensions to be added or removed from the
+default definition or R Markdown. See the \code{\link{rmarkdown_format}} for
+additional details.}
+
+\item{pandoc_args}{Additional command line options to pass to pandoc}
 }
 \value{
 R Markdown output format to pass to \code{\link{render}}
@@ -53,7 +74,7 @@ the markdown syntax for citations in the
 \href{http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html}{Bibliographies
 and Citations} article in the online documentation.
 
-Many aspects of the LaTeX template used to create PDF documents can be 
+Many aspects of the LaTeX template used to create PDF documents can be
 customized using metadata. For example:
 
 \tabular{l}{

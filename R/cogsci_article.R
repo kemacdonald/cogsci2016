@@ -3,6 +3,8 @@
 #' Template for creating a CogSci submission
 #'
 #' @inheritParams pdf_document
+#' @param includes add other arguments to the \code{cogsci2016::pdf_document()}
+#'   function
 #'
 #' @export
 
@@ -26,6 +28,7 @@ cogsci_paper <- function(keep_tex = TRUE,
         if (knitr:::output_asis(x, options)) return(x)
         paste0('\\begin{CodeChunk}\n', x, '\\end{CodeChunk}')
     }
+
     hook_input <- function(x, options) {
         paste0(c('\\begin{CodeInput}', x, '\\end{CodeInput}', ''),
                collapse = '\n')

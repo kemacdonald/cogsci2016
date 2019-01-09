@@ -1,15 +1,15 @@
-#' @export
+
 find_file <- function(template, file) {
     template <- system.file("rmarkdown", "templates", template, file,
                             package = "cogsci2016")
     if (template == "") {
         stop("Couldn't find template file ", template, "/", file, call. = FALSE)
     }
-    
+
     template
 }
 
-#' @export
+
 find_resource <- function(template, file) {
     find_file(template, file.path("resources", file))
 }
@@ -51,15 +51,15 @@ rmarkdown_system_file <- function(file) {
 }
 
 from_rmarkdown <- function(implicit_figures = TRUE, extensions = NULL) {
-    
+
     # paste extensions together and remove whitespace
     extensions <- paste0(extensions, collapse = "")
     extensions <- gsub(" ", "", extensions)
-    
+
     # exclude implicit figures unless the user has added them back
     if (!implicit_figures && !grepl("implicit_figures", extensions))
         extensions <- paste0("-implicit_figures", extensions)
-    
+
     rmarkdown_format(extensions)
 }
 
@@ -68,14 +68,14 @@ is_null_or_string <- function(text) {
 }
 
 read_lines_utf8 <- function(file, encoding) {
-    
+
     # read the file
     lines <- readLines(file, warn = FALSE)
-    
+
     # normalize encoding to iconv compatible form
     if (identical(encoding, "native.enc"))
         encoding <- ""
-    
+
     # convert to utf8
     if (!identical(encoding, "UTF-8"))
         iconv(lines, from = encoding, to = "UTF-8")
@@ -127,7 +127,7 @@ as_tmpfile <- function(str) {
 }
 
 dir_exists <- function(x) {
-    file_test('-d', x)
+    utils::file_test('-d', x)
 }
 
 file_with_ext <- function(file, ext) {
@@ -214,13 +214,13 @@ trim_trailing_ws <- function (x) {
 # Find common base directory, throw error if it doesn't exist
 base_dir <- function(x) {
     abs <- vapply(x, tools::file_path_as_absolute, character(1))
-    
+
     base <- unique(dirname(abs))
     if (length(base) > 1) {
         stop("Input files not all in same directory, please supply explicit wd",
              call. = FALSE)
     }
-    
+
     base
 }
 
@@ -234,9 +234,9 @@ base_dir <- function(x) {
 find_program <- function(program) {
     if (Sys.info()["sysname"] == "Darwin") {
         res <- suppressWarnings({
-            # Quote the path (so it can contain spaces, etc.) and escape any quotes 
+            # Quote the path (so it can contain spaces, etc.) and escape any quotes
             # and escapes in the path itself
-            sanitized_path <- gsub("\\", "\\\\", Sys.getenv("PATH"), fixed = TRUE)      
+            sanitized_path <- gsub("\\", "\\\\", Sys.getenv("PATH"), fixed = TRUE)
             sanitized_path <- gsub("\"", "\\\"", sanitized_path, fixed = TRUE)
             system(paste("PATH=\"", sanitized_path, "\" /usr/bin/which ", program, sep=""),
                    intern = TRUE)
