@@ -1,6 +1,6 @@
 Package: cogsci2016
 Title: Create CogSci Proceedings Submission with RMarkdown
-Version: 1.0.0.0
+Version: 1.0.0.1
 Authors@R: person("Kyle", "MacDonald", email = "kylem412@gmail.com", role = c("aut", "cre"))
 Description: Cogsci2016 provides an R Markdown LaTeX format and template for
     authoring a CogSci conference submission.
@@ -16,4 +16,4 @@ Imports:
     yaml (>= 2.1.19),
     rmarkdown (>= 0.3.10),
     knitr (>= 1.10.5)
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.0
