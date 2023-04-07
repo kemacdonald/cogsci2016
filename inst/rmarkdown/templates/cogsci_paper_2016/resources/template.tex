@@ -70,10 +70,10 @@ $if(csl-refs)$
 %  \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces$endif$}%
 %  {\par}
 
-%\newlength{\csllabelwidth}
-%\setlength{\csllabelwidth}{3em}
-%\newlength{\cslentryspacingunit} % times entry-spacing
-%\setlength{\cslentryspacingunit}{\parskip}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newlength{\cslentryspacingunit} % times entry-spacing
+\setlength{\cslentryspacingunit}{\parskip}
 
 % for Pandoc 2.8 to 2.10.1
 \newenvironment{cslreferences}%
@@ -89,7 +89,7 @@ $if(csl-refs)$
 	\def\par{\hangindent=\cslhangindent\oldpar}
 	\fi
 	% set entry spacing
-	\setlength{\parskip}{#2\cslentryspacingunit}
+	%\setlength{\parskip}{#2\cslentryspacingunit}
 }%
 {}
 \usepackage{calc}
